@@ -11,7 +11,7 @@ global $contributors_user_columns, $contributors_list, $contributors_count, $con
 
 $contributors = $db->query("SELECT $contributors_user_columns FROM $db_com AS c ".
 	"LEFT JOIN $db_users AS u ON u.user_id=c.com_authorid ".
-	"WHERE c.com_code=? GROUP BY c.com_authorid ORDER BY c.com_id ASC", $code)->fetchAll();
+	"WHERE c.com_area=? AND c.com_code=? GROUP BY c.com_authorid ORDER BY c.com_id ASC", array($ext_name, $code))->fetchAll();
 
 list(
 	$contributors_list,
