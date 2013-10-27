@@ -13,10 +13,8 @@ Auth_guests=R
 Lock_guests=2345A
 Auth_members=RW
 Lock_members=2345
-Requires_modules=
-Requires_plugins=
-Recommends_modules=
-Recomments_plugins=
+Recommends_modules=forums
+Recommends_plugins=comments
 [END_COT_EXT]
 
 [BEGIN_COT_EXT_CONFIG]
